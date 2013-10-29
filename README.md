@@ -6,6 +6,14 @@ HowToUseGradle
 
 ## 環境設定
 
+### gradle 導入
+
+以下コマンドで 1.6 が導入されます (2013.10.29 現在)。
+
+    $ brew install gradle
+  
+### Eclipse での設定
+
 Eclipse 上で Gradle による Android パッケージの Build を行なうためには ADT 22 および SDK Tools 22 の導入が必要となっていますので、まずそちらの導入を行なっておいて下さい。また、ADT 22 導入後は以下の不具合が出ることが確認されていますので、対処を行なう必要があるかもしれません。
 
 - libs にライブラリを置いて参照している場合、Build Path の設定の変更を行なう必要があります
