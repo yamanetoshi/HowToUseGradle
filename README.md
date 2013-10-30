@@ -26,16 +26,21 @@ ADT 22 の導入により、External Tools による gradle に実行が可能�
 Eclipse 上で Gradle による Android パッケージの Build を行なうには、Run -> External Tools -> External Tools Configurations より Gradle の実行に関する設定を盛り込んでおく必要があります。
 エントリを作成するには上記項目を選択した後に、左ペインに存在する「Program」を右クリックし、新規作成を選択します。あとは以下に示す項目に適切な値を入力して「Apply」ボタンをクリックしておいて下さい。
 
+![new program](https://f.cloud.github.com/assets/10039/1435558/f23098c2-4142-11e3-8098-dbd97f96b586.png)
+
 * Name には適切な名前を入力しておいて下さい
 * Main Tab
  * Location には /usr/local/bin/gradle と入力します
  * Working Directory には ${project\_loc} と入力します (Variables.. からの選択が可能)
  * Arguments には −-daemon ${string\_prompt} と入力します
  
+![Main Tab](https://f.cloud.github.com/assets/10039/1435577/530f5d72-4143-11e3-812b-e085e3d827fc.png)
+
 * Environment Tab
  * JAVA\_OPT という variable を新規に追加し、「-Dgroovy.source.encoding=UTF-8 -Dfile.encoding=UTF-8」という記述を Value に追加します
  + ANDROID\_HOME という variable を新規に追加し、SDK のディレクトリの絶対パス記述を Value に記述します
 
+![Environment Tab](https://f.cloud.github.com/assets/10039/1435578/62c3a0de-4143-11e3-9c33-7df466ce9497.png)
 
 ## build.gradle の雛形
 
@@ -130,6 +135,8 @@ gradle.properties
 ### Eclipse から起動
 
 Run -> External Tools -> External Tools Configrations から Gradle 実行の構成を表示し、右下にある Run ボタンを click することでオプション入力なダイアログが表示されます。clean aR と入力して OK ボタンをクリックすることにより release な apk が build/apk 配下に出力されます。
+
+![Variable Input](https://f.cloud.github.com/assets/10039/1435590/928f90de-4143-11e3-9253-6d12ee702fbe.png)
 
 ### コマンドラインから起動
 
